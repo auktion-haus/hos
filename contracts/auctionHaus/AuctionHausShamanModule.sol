@@ -233,7 +233,7 @@ contract AuctionHausShamanModule is IAuctionHausShaman, ZodiacModuleShaman, Mana
     function execute(uint256 maxBid) public nonReentrant isModuleEnabled isBaalManager isCaptain {
         uint256 yeethBalance = vault().balance;
 
-        if (block.timestamp < endTime) {
+        if (block.timestamp >= endTime) {
             revert AuctionHausShamanModule__InvalidEndTime();
         }
 
