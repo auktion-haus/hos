@@ -2,7 +2,7 @@
 pragma solidity >=0.8.7 <0.9.0;
 
 interface IAuctionHausShaman {
-    function execute(uint256 maxBid) external;
+    function execute(uint192 maxBid) external;
 
     // function endTime() external view returns (uint256);
 
@@ -10,5 +10,5 @@ interface IAuctionHausShaman {
 
     // function balance() external view returns (uint256);
 
-    function auctionHouse() external view returns (address);
+    // function auctionHouse() external view returns (address);
 }
